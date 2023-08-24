@@ -30,7 +30,7 @@ typedef struct stack_s
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
-typedef struct bus_s
+typedef struct s
 {
 	char *arg;
 	FILE *file;
@@ -59,22 +59,22 @@ void push(stack_t **top, unsigned int number);
 void pall(stack_t **top, unsigned int number);
 void pint(stack_t **top, unsigned int number);
 int ex_monty(char *buf, stack_t **top, unsigned int count, FILE *f);
-void free_stack(stack_t *head);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
-void f_add(stack_t **head, unsigned int counter);
-void f_nop(stack_t **head, unsigned int counter);
-void f_sub(stack_t **head, unsigned int counter);
-void f_div(stack_t **head, unsigned int counter);
-void f_mul(stack_t **head, unsigned int counter);
-void f_mod(stack_t **head, unsigned int counter);
-void f_pchar(stack_t **head, unsigned int counter);
-void f_pstr(stack_t **head, unsigned int counter);
-void f_rotl(stack_t **head, unsigned int counter);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
-void addnode(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
-void f_queue(stack_t **head, unsigned int counter);
-void f_stack(stack_t **head, unsigned int counter);
+void free_stack(stack_t *top);
+void pop(stack_t **top, unsigned int number);
+void swap(stack_t **top, unsigned int number);
+void add(stack_t **top, unsigned int number);
+void nop(stack_t **top, unsigned int number);
+void sub(stack_t **top, unsigned int number);
+void div(stack_t **top, unsigned int number);
+void mul(stack_t **top, unsigned int number);
+void mod(stack_t **top, unsigned int number);
+void pchar(stack_t **top, unsigned int number);
+void pstr(stack_t **top, unsigned int number);
+void rotl(stack_t **top, unsigned int number);
+void rotr(stack_t **top, __attribute__((unused)) unsigned int number);
+void addnode(stack_t **top, int item);
+void addqueue(stack_t **top, int item);
+void queue(stack_t **top, unsigned int item);
+void stack(stack_t **top, unsigned int item);
 #endif
 
